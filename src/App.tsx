@@ -1,32 +1,36 @@
-import { useState } from 'react'
-import { useProfile } from './hooks'
+import { Outlet, NavLink } from 'react-router-dom'
 
 const App: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const { data: userProfile, isLoading, isError, error } = useProfile({ enabled: isLoggedIn })
-
-  if (isLoading) {
-    return <div>Loading...</div>
-  }
-
-  if (isError) {
-    return <div>Error: {error.message}</div>
-  }
-
-  const toggleLogin = () => setIsLoggedIn(!isLoggedIn)
+  const urlList = [
+    {
+      path: '/',
+      label: 'Home',
+    },
+    {
+      path: 'profile',
+      label: 'Profile',
+    },
+  ]
 
   return (
-    <div>
-      <h2>User Profile</h2>
+    <div className="App">
+      <ul>
+        {urlList.map(({ path, label }) => (
+          <li key={path}>
+            <NavLink
+              to={path}
+              style={({ isActive }) => ({
+                fontWeight: isActive ? 'bold' : 'normal',
+                color: isActive ? 'blue' : 'normal',
+              })}
+            >
+              {label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
 
-      <button onClick={toggleLogin}>Toggle Login</button>
-
-      {isLoggedIn && userProfile && (
-        <>
-          <p>Name: {userProfile?.name}</p>
-          <p>Email: {userProfile?.email}</p>
-        </>
-      )}
+      <Outlet />
     </div>
   )
 }
