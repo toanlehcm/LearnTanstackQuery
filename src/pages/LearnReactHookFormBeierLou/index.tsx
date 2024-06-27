@@ -4,13 +4,19 @@ import { useForm } from 'react-hook-form'
 export interface ILearnReactHookFormBeierLouProps {}
 
 let renderCount = 0
+
+type FormValues = {
+  firstName: string
+  lastName: string
+}
+
 export default function LearnReactHookFormBeierLou() {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormValues>({
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -18,6 +24,9 @@ export default function LearnReactHookFormBeierLou() {
   })
 
   renderCount++
+
+  register('firstName')
+  register('lastName')
 
   // console.log('errors', errors)
   // console.log('watch()', watch())
