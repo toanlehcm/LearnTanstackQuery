@@ -25,8 +25,8 @@ export default function LearnReactHookFormBeierLou() {
 
   renderCount++
 
-  register('firstName')
-  register('lastName')
+  register('firstName', { required: true })
+  register('lastName', { maxLength: 5 })
 
   // console.log('errors', errors)
   // console.log('watch()', watch())
