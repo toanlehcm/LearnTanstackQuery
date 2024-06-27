@@ -10,6 +10,10 @@ const App: React.FC = () => {
       path: 'profile',
       label: 'Profile',
     },
+    {
+      path: 'tnx-details',
+      label: 'Transaction Details',
+    },
   ]
 
   return (

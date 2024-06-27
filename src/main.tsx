@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ProfilePage from './pages/profile.tsx'
+import TnxDetails from './pages/TnxDetails.tsx'
 
 // create once with default options. queryClient is global instance.
 const queryClient = new QueryClient()
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: 'profile',
         element: <ProfilePage />,
+      },
+      {
+        path: 'tnx-details',
+        element: <TnxDetails />,
       },
     ],
   },
