@@ -14,6 +14,10 @@ const App: React.FC = () => {
       path: 'tnx-details',
       label: 'Transaction Details',
     },
+    {
+      path: 'learn-react-hook-form-beier-lou',
+      label: 'Learn React Hook Form Beier Lou',
+    },
   ]
 
   return (

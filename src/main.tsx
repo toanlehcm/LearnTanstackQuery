@@ -7,6 +7,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ProfilePage from './pages/profile.tsx'
 import TnxDetails from './pages/TnxDetails.tsx'
+import LearnReactHookFormBeierLou from './pages/LearnReactHookFormBeierLou/index.tsx'
 
 // create once with default options. queryClient is global instance.
 const queryClient = new QueryClient()
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: 'tnx-details',
         element: <TnxDetails />,
+      },
+      {
+        path: 'learn-react-hook-form-beier-lou',
+        element: <LearnReactHookFormBeierLou />,
       },
     ],
   },
