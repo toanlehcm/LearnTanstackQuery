@@ -1,9 +1,9 @@
-import SumOfTwoNumber from './CodingExercises/SumOfTwoNumbers'
+import CreateCounterApp from './CodingExercises/CreateCounterApp'
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <SumOfTwoNumber />
+      <CreateCounterApp />
     </div>
   )
 }

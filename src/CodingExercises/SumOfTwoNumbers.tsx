@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-export interface ISumOfTwoNumberProps {}
+export interface ISumOfTwoNumbersProps {}
 
-export default function SumOfTwoNumber() {
+export default function SumOfTwoNumbers() {
   const [num1, setNum1] = useState(0)
   const [num2, setNum2] = useState(0)
   const [total, setTotal] = useState(0)
