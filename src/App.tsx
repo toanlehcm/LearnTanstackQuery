@@ -1,9 +1,9 @@
-import CreateCounterApp from './CodingExercises/CreateCounterApp'
+import FormUserFeedback from './CodingExercises/FormUserFeedback'
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <CreateCounterApp />
+      <FormUserFeedback />
     </div>
   )
 }
