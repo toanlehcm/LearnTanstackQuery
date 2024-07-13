@@ -1,9 +1,9 @@
-import FormUserFeedback from './CodingExercises/FormUserFeedback'
+import HolyGrailLayout from './CodingExercises/HolyGrailLayout'
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <FormUserFeedback />
+      <HolyGrailLayout />
     </div>
   )
 }

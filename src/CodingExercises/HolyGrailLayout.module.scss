@@ -1,0 +1,36 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'nav main main sidebar'
+    'footer footer footer footer';
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-rows: 60px 1fr 60px;
+}
+
+.header {
+  grid-area: header;
+  border: 1px solid black;
+}
+
+.nav {
+  grid-area: nav;
+  border: 1px solid black;
+}
+
+.main {
+  grid-area: main;
+  border: 1px solid black;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  border: 1px solid black;
+}
+
+.footer {
+  grid-area: footer;
+  border: 1px solid black;
+}
