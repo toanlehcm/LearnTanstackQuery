@@ -1,8 +1,8 @@
 import "./App.css";
-import AssignmentTwo from "./assignment/AssignmentTwo";
+import AssignmentOneWay2 from "./assignment/AssignmentOneWay2";
 
 function App() {
-  return <AssignmentTwo />;
+  return <AssignmentOneWay2 />;
 }
 
 export default App;
