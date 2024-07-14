@@ -8,7 +8,7 @@ type dataResponse = {
   id: number;
 };
 
-export default function Assignment() {
+export default function AssignmentOne() {
   const url = "https://6691200626c2a69f6e8e8da8.mockapi.io/api/testkit/user?id=5";
   const [stringResponse, setStringResponse] = useState<dataResponse[]>();
   const [result, setResult] = useState([]);
@@ -46,7 +46,7 @@ export default function Assignment() {
 
   return (
     <div>
-      <h1>Assignment</h1>
+      <h1>Assignment One</h1>
       <div>
         {stringResponse?.map((item, index) => {
           return <p key={index}>{item.name}</p>;
